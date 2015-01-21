@@ -11,8 +11,6 @@ CERTIFICATE_FILE = "apple_cert.pem"
 KEY_FILE = "apple_key.pem"
 APNS_QUEUE_SIZE = 100
 
-log.startLogging(sys.stdout)
-
 def handle_apns_send_failure(failure_tuple):
     """ Callback method which deals with tokens that, when attempting
         to send a notification, had an error response returned from
@@ -46,5 +44,7 @@ APNS_FEEDBACK = apns_feedback.APNFeedbackService(CERTIFICATE_FILE,
                                 KEY_FILE, process_failed_tokens,
                                 USE_SANDBOX)
 
-reactor.run()
+if __name__ == "__main__":
+    log.startLogging(sys.stdout)
+    reactor.run()
 
