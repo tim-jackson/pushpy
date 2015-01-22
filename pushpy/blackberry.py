@@ -139,7 +139,7 @@ class BlackberryService(object):
         body = FileBodyProducer(StringIO(payload))
 
         deferred_request = self.agent.request('POST', self.blackberry_hostname,
-            Headers({'User-Agent': ['Push notify'],
+            Headers({'User-Agent': ['pushpy'],
                      'Authorization': ['Basic %s' % base64.b64encode("%s:%s" %
                                                 (self.application_id,
                                                  self.application_password))],
