@@ -18,7 +18,7 @@ twistd -y pushpy_service_demo.tac
 --------------------
 An application can also be run inside a console session. This is convenient when developing/debugging an application, as all log output can be written straight to the console, but not advisable upon deployment.
 
-python pushpy_demo.py
+python apns_demo.py
 
 ### License
 --------------------
